@@ -1,1 +1,41 @@
-# disa-stig-compliance-labs
+# 🛡️ DISA STIG Compliance Labs
+
+This repository contains hands-on PowerShell remediation scripts aligned with the [Defense Information Systems Agency (DISA)](https://public.cyber.mil/stigs/) Security Technical Implementation Guides (STIGs) for Windows systems.
+
+Each script is mapped to a specific STIG ID and includes structured documentation, usage instructions, and tested implementation logic. These labs are designed to support compliance initiatives such as:
+
+- ✅ RMF/ATO accreditation packages
+- ✅ NIST 800-53 control alignment
+- ✅ Federal and DoD audit preparation
+- ✅ Secure baseline enforcement
+
+---
+
+## 📂 Repository Structure
+
+Each remediation script is named after its corresponding STIG ID. Scripts are written in native PowerShell and include:
+
+- `.SYNOPSIS` and `.USAGE` sections
+- Metadata block with author/date/version info
+- Inline comments for clarity and auditability
+
+---
+
+## 🔧 Example STIG Remediation
+
+- **`WN10-AU-000500.ps1`**  
+  Ensures that the Application event log maximum size is set to at least 32768 KB (32 MB) to preserve audit log data.  
+  [View Script](./WN10-AU-000500.ps1)
+
+---
+
+## 📌 Author
+
+**Peter Van Rossum**  
+🔗 [LinkedIn](https://www.linkedin.com/in/vanr)  
+💻 [GitHub](https://github.com/SecOpsPete)
+
+---
+
+_This repository will continue to grow with additional STIG-based remediations for Windows 10 and Server systems._
+
