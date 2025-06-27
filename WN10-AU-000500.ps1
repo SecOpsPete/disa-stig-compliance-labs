@@ -16,24 +16,17 @@
 .TESTED ON
     Date(s) Tested  : 2025-06-27
     Tested By       : Peter Van Rossum
-    Systems Tested  : Win 10
-    PowerShell Ver. : Windows PowerShell ISE
+    Systems Tested  : Windows 10
+    PowerShell Ver. : Windows PowerShell 5.1 (ISE)
 
 .USAGE
-    To run this script, open PowerShell **as Administrator** and execute the file:
+    Run this script in an elevated PowerShell session (Run as Administrator).
 
-        .\Set-ApplicationLogMaxSize.ps1
+    Example:
+    PS C:\> .\Set-ApplicationLogMaxSize.ps1
 
-    This script will:
-    - Create the registry path if it does not exist.
-    - Set the 'MaxSize' value for the Application Event Log to 32768 KB (32 MB).
-    - Output status messages to confirm changes.
-
-    This script is intended for manual or automated compliance enforcement based on
-    DISA STIG ID WN10-AU-000500. Ensure execution policy allows script execution:
-
-        Set-ExecutionPolicy RemoteSigned -Scope Process
-   
+    Ensure script execution is allowed for the session:
+    PS C:\> Set-ExecutionPolicy RemoteSigned -Scope Process
 #>
 
 # Define the registry path and value
