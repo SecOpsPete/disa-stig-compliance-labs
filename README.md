@@ -52,8 +52,6 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-SO-000120.ps1`](./WN10-SO-000120.ps1)**  
   Ensures the Windows SMB server is configured to always digitally sign communications to prevent man-in-the-middle attacks.
 
-- **[`WN10-CC-000230.ps1`](./WN10-CC-000230.ps1)**  
-  Prevents users from bypassing Microsoft Defender SmartScreen filter warnings in Microsoft Edge by setting `PreventOverride` to `1`.
 
 *(More scripts coming soon as this lab continues to expand.)*
 
