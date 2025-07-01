@@ -43,6 +43,10 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-AC-000005.ps1`](./WN10-AC-000005.ps1)**  
   Sets the account lockout duration to 15 minutes to protect against brute-force attacks.
 
+- **[`WN10-AC-000020.ps1`](./WN10-AC-000020.ps1)**  
+  Enforces a password history of 24 remembered passwords to prevent reuse and meet DoD security standards.
+
+
 *(More scripts coming soon as this lab continues to expand.)*
 
 ---
