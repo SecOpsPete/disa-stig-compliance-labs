@@ -52,6 +52,8 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-SO-000120.ps1`](./WN10-SO-000120.ps1)**  
   Ensures the Windows SMB server is configured to always digitally sign communications to prevent man-in-the-middle attacks.
 
+- **[`WN10-SO-000060.ps1`](./WN10-SO-000060.ps1)**  
+  Configures Windows to require a password when waking from sleep (plugged in), enhancing local session security.
 
 *(More scripts coming soon as this lab continues to expand.)*
 
