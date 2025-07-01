@@ -44,7 +44,7 @@ When testing STIG remediations manually (especially registry- or GPO-based), **y
 
 ```powershell
 gpupdate /force
-
+```
 
 ---
 
