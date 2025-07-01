@@ -31,7 +31,20 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-SO-000025.ps1`](./WN10-SO-000025.ps1)**  
   Renames the built-in Guest account to a non-default name ("NewGuest") to improve system security and comply with STIG requirements.
 
+- **[`WN10-CC-000150.ps1`](./WN10-CC-000150.ps1)**  
+  Configures the system to require a password when resuming from sleep (plugged in), improving local session security.
+
 *(More scripts coming soon as this lab continues to expand.)*
+
+---
+
+### 🧠 Pro Tip: Applying Manual Group Policy Changes
+
+When testing STIG remediations manually (especially registry- or GPO-based), **you do not need to reboot** the system for changes to take effect. Instead, use:
+
+```powershell
+gpupdate /force
+
 
 ---
 
