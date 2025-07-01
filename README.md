@@ -40,6 +40,9 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-SO-000250.ps1`](./WN10-SO-000250.ps1)**  
   Configures UAC to prompt administrators for consent on the secure desktop in Admin Approval Mode.
 
+- **[`WN10-AC-000005.ps1`](./WN10-AC-000005.ps1)**  
+  Sets the account lockout duration to 15 minutes to protect against brute-force attacks.
+
 *(More scripts coming soon as this lab continues to expand.)*
 
 ---
