@@ -46,8 +46,8 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-AC-000020.ps1`](./WN10-AC-000020.ps1)**  
   Enforces a password history of 24 remembered passwords to prevent reuse and meet DoD security standards.
 
-
-
+- **[`WN10-SO-000100.ps1`](./WN10-SO-000100.ps1)**  
+  Ensures the SMB client is configured to always digitally sign SMB communications, helping to prevent man-in-the-middle attacks.
 
 *(More scripts coming soon as this lab continues to expand.)*
 
