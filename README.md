@@ -21,11 +21,17 @@ Each remediation script is named after its corresponding STIG ID. Scripts are wr
 
 ---
 
-## 🔧 Example STIG Remediation
+## 📜 STIG Remediation Scripts
 
-- **`WN10-AU-000500.ps1`**  
-  Ensures that the Application event log maximum size is set to at least 32768 KB (32 MB) to preserve audit log data.  
-  [View Script](./WN10-AU-000500.ps1)
+Each script below corresponds to a specific STIG ID and includes structured documentation, metadata, and tested remediation logic:
+
+- **[`WN10-AU-000500.ps1`](./WN10-AU-000500.ps1)**  
+  Ensures the Application event log maximum size is set to at least 32768 KB (32 MB) to preserve audit log data.
+
+- **[`WN10-SO-000025.ps1`](./WN10-SO-000025.ps1)**  
+  Renames the built-in Guest account to a non-default name ("NewGuest") to improve system security and comply with STIG requirements.
+
+*(More scripts coming soon as this lab continues to expand.)*
 
 ---
 
