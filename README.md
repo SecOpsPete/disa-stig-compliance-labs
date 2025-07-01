@@ -37,6 +37,8 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-SO-000245.ps1`](./WN10-SO-000245.ps1)**  
   Enables Admin Approval Mode for the built-in Administrator account to enforce UAC security requirements.
 
+- **[`WN10-SO-000250.ps1`](./WN10-SO-000250.ps1)**  
+  Configures UAC to prompt administrators for consent on the secure desktop in Admin Approval Mode.
 
 *(More scripts coming soon as this lab continues to expand.)*
 
