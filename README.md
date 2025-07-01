@@ -49,6 +49,9 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-SO-000100.ps1`](./WN10-SO-000100.ps1)**  
   Ensures the SMB client is configured to always digitally sign SMB communications, helping to prevent man-in-the-middle attacks.
 
+- **[`WN10-SO-000120.ps1`](./WN10-SO-000120.ps1)**  
+  Ensures the Windows SMB server is configured to always digitally sign communications to prevent man-in-the-middle attacks.
+
 *(More scripts coming soon as this lab continues to expand.)*
 
 ---
