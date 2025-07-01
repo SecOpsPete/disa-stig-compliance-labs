@@ -46,8 +46,7 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-AC-000020.ps1`](./WN10-AC-000020.ps1)**  
   Enforces a password history of 24 remembered passwords to prevent reuse and meet DoD security standards.
 
-- **[`WN10-CC-000185.ps1`](./WN10-CC-000185.ps1)**  
-  Disables default autorun behavior to prevent automatic execution of potentially malicious media.
+
 
 
 *(More scripts coming soon as this lab continues to expand.)*
