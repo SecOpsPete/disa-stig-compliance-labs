@@ -28,7 +28,7 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-AU-000500.ps1`](./WN10-AU-000500.ps1)**  
   Ensures the Application event log maximum size is set to at least 32768 KB (32 MB) to preserve audit log data.
 
-- **[`WN10-SO-000255.ps1`](./WN10-SO-000025.ps1)**  
+- **[`WN10-SO-000255.ps1`](./WN10-SO-000225.ps1)**  
   Renames the built-in Guest account to a non-default name ("NewGuest") to improve system security and comply with STIG requirements.
 
 - **[`WN10-CC-000150.ps1`](./WN10-CC-000150.ps1)**  
