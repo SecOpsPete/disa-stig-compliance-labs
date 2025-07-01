@@ -34,6 +34,10 @@ Each script below corresponds to a specific STIG ID and includes structured docu
 - **[`WN10-CC-000150.ps1`](./WN10-CC-000150.ps1)**  
   Configures the system to require a password when resuming from sleep (plugged in), improving local session security.
 
+- **[`WN10-SO-000245.ps1`](./WN10-SO-000245.ps1)**  
+  Enables Admin Approval Mode for the built-in Administrator account to enforce UAC security requirements.
+
+
 *(More scripts coming soon as this lab continues to expand.)*
 
 ---
