@@ -1,8 +1,7 @@
 <#
 .SYNOPSIS
-    This PowerShell script configures the registry to prevent users from bypassing 
-    Windows Defender SmartScreen warnings for malicious sites in Microsoft Edge, 
-    enforcing STIG compliance with ID WN10-CC-000230.
+    This PowerShell script enforces the Group Policy setting to prevent users from bypassing
+    Windows Defender SmartScreen warnings in Microsoft Edge, in accordance with STIG ID WN10-CC-000230.
 
 .NOTES
     Author          : Peter Van Rossum
@@ -10,42 +9,40 @@
     GitHub          : https://github.com/SecOpsPete
     Date Created    : 2025-07-01
     Last Modified   : 2025-07-01
-    Version         : 1.0
-    CVEs            : N/A
-    Plugin IDs      : N/A
+    Version         : 1.1
     STIG-ID         : WN10-CC-000230
 
 .TESTED ON
     Date(s) Tested  : 2025-07-01
     Tested By       : Peter Van Rossum
-    Systems Tested  : Windows 10
+    Systems Tested  : Windows 10 (Local Group Policy)
     PowerShell Ver. : Windows PowerShell 5.1 (ISE)
 
 .USAGE
-    Run this script in an elevated PowerShell session (Run as Administrator).
+    Run this script in an elevated PowerShell session.
 
     Example:
     PS C:\> .\WN10-CC-000230.ps1
 
-    Ensure script execution is allowed for the session:
+    Ensure execution policy permits running scripts:
     PS C:\> Set-ExecutionPolicy RemoteSigned -Scope Process
 #>
 
-# Define registry path and required values
-$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\MicrosoftEdge\PhishingFilter"
-$valueName    = "PreventOverride"
-$valueData    = 1  # 0x00000001 = "Enabled"
+# Define registry path and key/value
+$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Edge"
+$valueName    = "PreventSmartScreenPromptOverride"
+$valueData    = 1  # Enabled = Do not allow override of SmartScreen filter warnings
 
-# Create the registry path if it doesn't exist
+# Create registry path if missing
 if (-not (Test-Path $registryPath)) {
-    Write-Host "Registry path does not exist. Creating: $registryPath"
+    Write-Host "Creating registry path: $registryPath"
     New-Item -Path $registryPath -Force | Out-Null
 } else {
-    Write-Host "Registry path exists: $registryPath"
+    Write-Host "Registry path already exists: $registryPath"
 }
 
-# Apply the value
-Write-Host "Setting '$valueName' to '$valueData' at: $registryPath"
+# Apply the policy setting
+Write-Host "Applying STIG WN10-CC-000230 - Prevent SmartScreen override"
 Set-ItemProperty -Path $registryPath -Name $valueName -Value $valueData -Type DWord
 
-Write-Host "STIG WN10-CC-000230 remediation applied successfully."
+Write-Host "STIG WN10-CC-000230 applied successfully. A reboot or gpupdate /force may be required."
