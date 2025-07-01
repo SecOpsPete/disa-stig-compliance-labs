@@ -1,7 +1,8 @@
 <#
 .SYNOPSIS
-    This PowerShell script configures the system to disable autorun behavior by setting NoAutorun = 1,
-    in compliance with STIG ID WN10-CC-000185.
+    This PowerShell script enforces the Group Policy setting that disables AutoRun by setting the
+    appropriate registry value to prevent execution of any autorun commands. This allows GPEdit to
+    reflect the change as "Enabled", in compliance with STIG ID WN10-CC-000185.
 
 .NOTES
     Author          : Peter Van Rossum
@@ -9,7 +10,7 @@
     GitHub          : https://github.com/SecOpsPete
     Date Created    : 2025-07-01
     Last Modified   : 2025-07-01
-    Version         : 1.0
+    Version         : 1.1
     CVEs            : N/A
     Plugin IDs      : N/A
     STIG-ID         : WN10-CC-000185
@@ -30,21 +31,21 @@
     PS C:\> Set-ExecutionPolicy RemoteSigned -Scope Process
 #>
 
-# Define the registry path and desired value
-$registryPath = "HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\Explorer"
+# Define the GPO-backed registry path and values
+$registryPath = "HKLM:\SOFTWARE\Policies\Microsoft\Windows\Explorer"
 $valueName    = "NoAutorun"
-$valueData    = 1  # 0x00000001 in hexadecimal
+$valueData    = 1  # 0x00000001 = "Enabled: Do not execute any autorun commands"
 
-# Ensure the path exists
+# Create the registry path if it doesn't exist
 if (-not (Test-Path $registryPath)) {
     Write-Host "Registry path does not exist. Creating: $registryPath"
     New-Item -Path $registryPath -Force | Out-Null
 } else {
-    Write-Host "Registry path already exists: $registryPath"
+    Write-Host "Registry path exists: $registryPath"
 }
 
-# Set the value
+# Set the value for AutoRun behavior
 Write-Host "Setting '$valueName' to '$valueData' at: $registryPath"
 Set-ItemProperty -Path $registryPath -Name $valueName -Value $valueData -Type DWord
 
-Write-Host "STIG WN10-CC-000185 remediation applied successfully."
+Write-Host "STIG WN10-CC-000185 remediation applied successfully (GPO-visible)."
