@@ -1,13 +1,13 @@
 # 🛡️ DISA STIG Compliance Labs
 
-This repository contains hands-on PowerShell remediation scripts aligned with the [Defense Information Systems Agency (DISA)](https://public.cyber.mil/stigs/) Security Technical Implementation Guides (STIGs) for Windows systems.
+This repository contains **hands-on PowerShell scripts** for remediating Windows Security Technical Implementation Guide (STIG) findings published by the [Defense Information Systems Agency (DISA)](https://public.cyber.mil/stigs/).
 
-Each script is mapped to a specific STIG ID and includes structured documentation, usage instructions, and tested implementation logic. These labs are designed to support compliance initiatives such as:
+Each script targets a specific STIG ID and includes structured documentation, usage guidance, and implementation logic tested in standalone environments. While these scripts **automate the underlying remediation actions**, they are intended for **manual execution on individual systems** — making them ideal for:
 
-- ✅ RMF/ATO accreditation packages
-- ✅ NIST 800-53 control alignment
-- ✅ Federal and DoD audit preparation
-- ✅ Secure baseline enforcement
+- ✅ RMF/ATO accreditation preparation (e.g., screenshots, documented actions)
+- ✅ NIST 800-53 control alignment in lab or pilot environments
+- ✅ Federal and DoD audit readiness demonstrations
+- ✅ Secure baseline hardening during initial system setup
 
 ---
 
